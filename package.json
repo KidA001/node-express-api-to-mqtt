@@ -1,0 +1,30 @@
+{
+  "name": "Express API to MQTT",
+  "version": "1.0.0",
+  "description": "Sends API requests to MQTT server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbh6/express-api-mqtt-example.git"
+  },
+  "keywords": [
+    "mqtt",
+    "expressjs",
+    "api"
+  ],
+  "author": "Cristian Botella Hurtado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbh6/express-api-mqtt-example/issues"
+  },
+  "homepage": "https://github.com/cbh6/express-api-mqtt-example#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.18.2",
+    "mqtt": "^4.3.7"
+  }
+}

@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  node-express-api-to-mqtt:
+    ports:
+        - '6000:6000'
+    environment:
+        - MQTT_PW=
+        - MQTT_USERNAME=
+        - MQTT_HOST=
+    image: kida001/node-express-api-to-mqtt

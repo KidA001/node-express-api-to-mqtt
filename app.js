@@ -18,7 +18,7 @@ app.post("/send-mqtt", multipartMiddleware, function(req, res) {
   var results = data.results;
   var topic = 'plate-recognizer/detection'
   if (!!results?.length) {
-    var plate = results[0].plate
+    var plate = results[0].plate?.toUpperCase()
     mqttClient.sendMessage(`${topic}/detail`, results[0]);
     mqttClient.sendMessage(`${topic}/plate`, plate);
     console.log(data.timestamp_local)

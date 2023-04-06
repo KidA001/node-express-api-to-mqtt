@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   node-express-api-to-mqtt:
+    restart: unless-stopped
     ports:
         - '6000:6000'
     environment:

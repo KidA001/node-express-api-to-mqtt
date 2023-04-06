@@ -29,8 +29,10 @@ class MqttHandler {
   }
 
   // Sends a mqtt message to topic: mytopic
-  sendMessage(topic, json_message) {
-    this.mqttClient.publish(topic, JSON.stringify(json_message), { retain: true });
+  sendMessage(topic, message, is_json) {
+    if (is_json) message = JSON.stringify(message);
+
+    this.mqttClient.publish(topic, message, { retain: true });
   }
 }
 

@@ -7,4 +7,4 @@ services:
         - MQTT_PW=
         - MQTT_USERNAME=
         - MQTT_HOST=
-    image: kida001/node-express-api-to-mqtt
+    image: kida001/node-express-api-to-mqtt:latest

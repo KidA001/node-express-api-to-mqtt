@@ -22,6 +22,7 @@ app.post("/send-mqtt", multipartMiddleware, function(req, res) {
     var plate = results[0].plate?.toUpperCase();
     mqttClient.sendMessage(`${topic}/detail`, results[0], true);
     mqttClient.sendMessage(`${topic}/plate`, plate, false);
+    mqttClient.sendMessage(`${topic}/homeassistant-plate`, plate, false);
     console.log(data.timestamp_local);
     console.log(`Recognized plate: ${plate}`);
   };
